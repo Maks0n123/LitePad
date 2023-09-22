@@ -1,0 +1,28 @@
+.downloads {
+    padding-bottom: 200px;
+    &__tittle {
+        font-family: a_AvanteInt;
+        font-size: 26px;
+        text-align: center;
+    }
+    &__item {
+        max-width: 845px;
+        &__link {
+           padding-left: 30px;
+            color: #000;
+            font-family: a_AvanteLt;
+            font-size: 26px;
+            text-decoration: none;
+            transition: 0.5s;
+            &:hover {
+                color: $Green;
+            }
+        }
+    }
+    &__markets {
+        max-width: 845px;
+        &__img{
+            max-width: 100%;
+        }
+    }
+}
