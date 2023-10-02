@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifePad</title>
+  <meta name="keywords" content="LifePad, ПЦР, вирус, картриджная система">
+  <meta name="description"
+    content="LifePad – единственная зарегистрированная в РФ картриджная система ПЦР-диагностики, предназначенная для in vitro диагностики вирусных респираторных заболеваний вне лабораторий.">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="d-flex justify-content-end position-relative">
+            <button type="button" class="buttonCloseModal" data-bs-dismiss="modal">
+              <img src="images/icons/x-circle.svg" alt="x-circle">
+            </button>
+          </div>
+          <form class="form d-flex flex-column justify-content-center">
+            <div class="form__item">
+              <label for="FormName" class="form__label form__label_modInput">Имя</label>
+              <input id="FormName" type="text" name="name" class="form__input form__InputFieldMod _req"
+                placeholder="Имя">
+            </div>
+            <div class="row pt-3">
+              <div class="leftPath col-md-6 col-12 pe-3">
+                <div class="form__item">
+                  <label for="FormPhone" class="form__label form__label_modInput">Телефон</label>
+                  <input id="FormPhone" type="tel" name="phone" class="form__input form__InputFieldMod _req"
+                    placeholder="Телефон">
+                </div>
+                <div class="form__item pt-3">
+                  <label for="FormEmail" class="form__label form__label_modInput ">E-mail</label>
+                  <input id="FormEmail" type="email" name="E-mail" class="form__input form__InputFieldMod _req _email"
+                    placeholder="Почта">
+                </div>
+              </div>
+              <div class="rightPath col-md-6 col-12 ps-3">
+                <div class="form__item ItemTextArea">
+                  <label for="formMessage" class="form__label form__label_modTextarea">Желаемый день и время
+                    доставки</label>
+                  <textarea name="message" id="formMessage" class="form__input form__textarea"
+                    placeholder="Желаемый день и время доставки"></textarea>
+                </div>
+                <div class="form__item pt-1">
+                  <div class="checkbox">
+                    <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input">
+                    <label for="formAgreement" class="checkbox__label">как можно быстрее</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttonModalWrap d-flex justify-content-center pt-5">
+              <button type="submit" class="button">Оставить заявку</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="number-header">
+      <div class="container d-flex justify-content-end">
+        <a class="number-header__link" href="tel:88007076401">8 (800) 707-64-01</a>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark headerMenu">
+      <div class="container">
+        <a class="navbar-brand me-5" href="index.html">
+          <img class="logo" src="images/logo.svg" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-0 nav-link_mod" aria-current="page" href="products.html">Продукция</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0 nav-link_mod" href="adviсe.html">Советы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0 nav-link_mod" href="diary.html">Дневник</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0 nav-link_mod" href="support.html">Поддержка</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0 nav-link_mod" href="downloads.html">Загрузки</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              data-bs-whatever="@getbootstrap">Купить</button>
+            <button class="button ms-5" type="submit">Регистрация анализатора</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    </div>
+  </header>
+  <main>
+
+    <div class="swiper mySwiper mySwiper_mod">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide SlideItem">
+          <img src="images/SlideImage.jpg" class="SlideItem__img" alt="SlideImage">
+          <div class="carousel-right element-animation">
+            <h1 class="carousel-right__logo"><span class="carousel-right__logo__firstPath">Life</span>Pad</h1>
+            <h2 class="carousel-right__tittle">Экспресс - ПЦР за <span class="carousel-right__tittle__number">45</span>
+              минут</h2>
+            <p class="carousel-right__text">LifePad – единственная зарегистрированная в РФ картриджная система
+              ПЦР-диагностики, предназначенная для
+              <span class="carousel-right__text__bold"> in vitro</span> диагностики вирусных респираторных заболеваний
+              вне лабораторий.
+              Для домашнего использования, детьми старше 18 лет.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide SlideItem">
+          <img src="images/SlideImage.jpg" class="d-block SlideItem__img" alt="SlideImage">
+          <div class="carousel-right">
+            <h1 class="carousel-right__logo"><span class="carousel-right__logo__firstPath">Life</span>Pad</h1>
+            <h2 class="carousel-right__tittle">Экспресс - ПЦР за <span class="carousel-right__tittle__number">45</span>
+              минут</h2>
+            <p class="carousel-right__text">LifePad – единственная зарегистрированная в РФ картриджная система
+              ПЦР-диагностики, предназначенная для
+              <span class="carousel-right__text__bold"> in vitro</span> диагностики вирусных респираторных заболеваний
+              вне лабораторий.
+              Для домашнего использования, детьми старше 18 лет.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide SlideItem">
+          <img src="images/SlideImage.jpg" class="d-block SlideItem__img" alt="SlideImage">
+          <div class="carousel-right">
+            <h1 class="carousel-right__logo"><span class="carousel-right__logo__firstPath">Life</span>Pad</h1>
+            <h2 class="carousel-right__tittle">Экспресс - ПЦР за <span class="carousel-right__tittle__number">45</span>
+              минут</h2>
+            <p class="carousel-right__text">LifePad – единственная зарегистрированная в РФ картриджная система
+              ПЦР-диагностики, предназначенная для
+              <span class="carousel-right__text__bold"> in vitro</span> диагностики вирусных респираторных заболеваний
+              вне лабораторий.
+              Для домашнего использования, детьми старше 18 лет.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide SlideItem">
+          <img src="images/SlideImage.jpg" class="d-block SlideItem__img" alt="SlideImage">
+          <div class="carousel-right">
+            <h1 class="carousel-right__logo"><span class="carousel-right__logo__firstPath">Life</span>Pad</h1>
+            <h2 class="carousel-right__tittle">Экспресс - ПЦР за <span class="carousel-right__tittle__number">45</span>
+              минут</h2>
+            <p class="carousel-right__text">LifePad – единственная зарегистрированная в РФ картриджная система
+              ПЦР-диагностики, предназначенная для
+              <span class="carousel-right__text__bold"> in vitro</span> диагностики вирусных респираторных заболеваний
+              вне лабораторий.
+              Для домашнего использования, детьми старше 18 лет.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide SlideItem">
+          <img src="images/SlideImage.jpg" class="d-block SlideItem__img" alt="SlideImage">
+          <div class="carousel-right">
+            <h1 class="carousel-right__logo"><span class="carousel-right__logo__firstPath">Life</span>Pad</h1>
+            <h2 class="carousel-right__tittle">Экспресс - ПЦР за <span class="carousel-right__tittle__number">45</span>
+              минут</h2>
+            <p class="carousel-right__text">LifePad – единственная зарегистрированная в РФ картриджная система
+              ПЦР-диагностики, предназначенная для
+              <span class="carousel-right__text__bold"> in vitro</span> диагностики вирусных респираторных заболеваний
+              вне лабораторий.
+              Для домашнего использования, детьми старше 18 лет.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="container">
+      <section class="Recommended ">
+        <h2 class="d-none"></h2>
+        <div class="row">
+          <article class="Recommended__item col-12 col-md-4 d-flex flex-column align-items-center element-animation">
+            <h3 class="Recommended__item__tittle">Рекомендовано</h3>
+            <img class="Recommended__item__orgImg mt-2" src="images/rec1.svg" alt="rec1">
+            <img class="Recommended__item__orgImg mt-2 pb-4" src="images/rec2.svg" alt="rec2">
+          </article>
+          <article
+            class="Recommended__item Recommended__item_greenBorderMod col-12 col-md-4 mt-4 mt-md-0 element-animation">
+            <h3 class="Recommended__item__tittle pt-4 pt-md-0">Точность</h3>
+            <h4 class="Recommended__item__subtittleNumber mt-2 pb-4">98,04<span
+                class="Recommended__item__subtittleNumber__percent">%</span></h3>
+          </article>
+          <article class="Recommended__item col-12 col-md-4 mt-4 mt-md-0 element-animation">
+            <h3 class="Recommended__item__tittle">Регистрационное
+              удостоверение</h3>
+            <h4 class="Recommended__item__subtittle mt-3 pb-4">Росздравнадзора от 02 июля 2020 <br>
+              № РЗН 2020/11113</h4>
+          </article>
+        </div>
+      </section>
+    </div>
+    <section class="player player_mod element-animation">
+      <h2 class="d-none"></h2>
+      <div class="container">
+        <div class="player__content">
+
+          <!-- <a class="player__content__link" href="https://www.youtube.com/embed/bb4Qjy4o2nA">
+            <img class="player__content__link__playButton" src="images/icons/play.svg" alt="playButton">
+
+          </a> -->
+          <div class="player__content__playPicture">
+            <img class="player__content__playPicture__img" src="images/PlayerPicture.png" alt="playerPicture">
+            <div class="player__content__link">
+              <img class="player__content__link__playButton" src="images/icons/play.svg" alt="playButton">
+              <!-- <iframe class="player__content__iframe" width="100%" height="705px" src="https://www.youtube.com/embed/bb4Qjy4o2nA?autoplay=1"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages advantages_mod">
+      <h2 class="d-none"></h2>
+      <div class="container">
+        <div class="advantages__content">
+          <article
+            class="advantages__item advantages__item_mod d-flex flex-column px-0 justify-content-center align-items-center element-animation">
+            <img class="advantages__item__img" src="images/icons/bar-chart-line.svg" alt="bar-chart-line">
+            <h2 class="advantages__item__tittle">Высокая точность</h2>
+            <p class="advantages__item__text  mb-0">Точность результатов сравнима
+              по точности с результатами
+              ПЦР-анализа, специфичность теста – 100%
+            </p>
+          </article>
+          <article
+            class="advantages__item advantages__item_mod d-flex flex-column px-0 justify-content-center align-items-center element-animation">
+            <img class="advantages__item__img" src="images/icons/clock-history.svg" alt="clock-history">
+            <h2 class="advantages__item__tittle">15 – 20 минут</h2>
+            <p class="advantages__item__text  mb-0">Результат тестирования через 15 – 20 минут, в отличии от
+              ПЦР-анализа, на который тратится до 2 дней
+            </p>
+          </article>
+          <article
+            class="advantages__item advantages__item_mod d-flex flex-column px-0 justify-content-center align-items-center element-animation">
+            <img class="advantages__item__img" src="images/icons/calendar-check.svg" alt="calendar-check">
+            <h2 class="advantages__item__tittle">С первых дней</h2>
+            <p class="advantages__item__text  mb-0">Работает с первых дней начала заболевания, в то время как тесты
+              на антитела начинают работать не ранее чем на 7-8 день заболевания.
+
+            </p>
+          </article>
+          <article
+            class="advantages__item advantages__item_mod d-flex flex-column px-0 justify-content-center align-items-center element-animation">
+            <img class="advantages__item__img" src="images/icons/bag-plus.svg" alt="bag-plus">
+            <h2 class="advantages__item__tittle">Всё в наборе</h2>
+            <p class="advantages__item__text  mb-0">Все необходимое для выполнения теста есть в наборе, не требуется
+              дополнительного оборудования.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="WillNotAffect WillNotAffect_mod">
+      <div class="container">
+        <h2 class="WillNotAffect__tittle m-0 element-animation">Использование нижеприведенных препаратов, не повлияет на
+          результат
+          <br>(клинически доказано):
+        </h2>
+        <div class="row">
+          <div class="WillNotAffect__leftPath col-12 col-md-6 d-flex flex-column element-animation">
+            <h3 class="WillNotAffect__leftPath__text m-0"><span class="WillNotAffect__leftPath__text__bold">Пульмикорт
+              </span>0,5 мг/мл суспензия для ингаляции дозированная</h3>
+            <h3 class="WillNotAffect__leftPath__text m-0 mt-3"><span
+                class="WillNotAffect__leftPath__text__bold">Дексаметазон – Виал </span>раствор для инъекций 4 мг/мл</h3>
+            <h3 class="WillNotAffect__leftPath__text m-0 mt-3"><span
+                class="WillNotAffect__leftPath__text__bold">Флюстоприно </span>(оксиметазолин) спрей назальный 0,05%
+            </h3>
+          </div>
+          <div class="WillNotAffect__rightPath col-12 col-md-6 d-flex flex-column mt-3 mt-md-0 element-animation">
+            <h3 class="WillNotAffect__rightPath__text m-0"><span class="WillNotAffect__rightPath__text__bold">Ксилокт
+                СОЛОфарм </span>(ксилометазолин) спрей назальный дозированный 15 мл 90 доз</h3>
+            <h3 class="WillNotAffect__rightPath__text m-0 mt-3"><span
+                class="WillNotAffect__rightPath__text__bold">Ивилект </span>(нафазолин) 0,1% (1мг) спрей назальный</h3>
+            <h3 class="WillNotAffect__rightPath__text m-0 mt-3"><span
+                class="WillNotAffect__rightPath__text__bold">Реленза </span>(занамивир) 5мг/доза 5 ротадисков по 4
+              ячейки</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="steps steps_mod">
+      <div class="container">
+        <h2 class="steps__tittle element-animation">4 простых шага:</h2>
+        <div class="steps__content">
+          <article class="steps__content__item element-animation">
+            <h3 class="steps__content__item__tittle">1</h3>
+            <p class="steps__content__item__text">Тщательно вымойте руки или обработайте антисептиком. Наденьте
+              перчатки. Вставьте Тестовую кассету в Анализатор.</p>
+          </article>
+          <article class="steps__content__item element-animation">
+            <h3 class="steps__content__item__tittle">2</h3>
+            <p class="steps__content__item__text">Откройте стерильный зонд. Погрузите зонд на 1,5-2 см в ноздрю и
+              сделайте 10 вращательных движений.</p>
+          </article>
+          <article class="steps__content__item element-animation">
+            <h3 class="steps__content__item__tittle">3</h3>
+            <p class="steps__content__item__text">Погрузите зонд в Картридж. Запустите тест.</p>
+          </article>
+          <article class="steps__content__item element-animation">
+            <h3 class="steps__content__item__tittle">4</h3>
+            <p class="steps__content__item__text">Получите результат анализа.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="application application_mod">
+      <div class="container">
+        <h2 class="application__tittle application__tittle_mod element-animation">Бесплатное мобильное приложение
+          <br>LifePad
+        </h2>
+        <div class="row pt-2">
+          <div class="application__leftPath col-12 col-md-4 d-flex flex-column align-items-center element-animation">
+            <img class="application__leftpath__iphone" src="images/iphone.png" alt="iphone">
+            <div class="application__leftpath__markets application__leftpath__markets_mod d-flex">
+              <a class="wrapLink" href="#"><img class="application__leftpath__img me-3" src="images/googlePlay.svg"
+                  alt="googlePlay"></a>
+              <a class="wrapLink" href="#"><img class="application__leftpath__img" src="images/appstore.svg"
+                  alt="appstore"></a>
+            </div>
+          </div>
+          <div
+            class="application__centrePath col-12 col-md-4 d-flex flex-column align-items-center mt-5 mt-md-0 element-animation">
+            <p class="application__centrePath__text">Удобное интуитивное понятное программное обеспечение,
+              Для iOS и Android разработанное так, чтобы с ним справился
+              даже неподготовленный пользователь.</p>
+            <img class="application__centrePath__img d-none d-md-block pt-4" src="images/applicationArrow.svg"
+              alt="applicationArrow">
+          </div>
+          <div
+            class="application__rightPath col-12 col-md-4 d-flex flex-column align-items-center justify-content-end mt-5 mt-md-0 element-animation">
+            <img class="application__rightPath__img " src="images/applicationLifepad.png" alt="applicationLifepad">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="swiperDocuments">
+      <div class="container">
+        <h2 class="swiperDocuments__tittle swiperDocuments__tittle_mod element-animation">Регистрационные удостоверения
+          и сертификаты</h2>
+
+        <div class="swiper swiperDocumentsContent">
+          <div class="swiper-wrapper parent-container element-animation">
+            <a href="images/Document1.jpg" class="swiper-slide d-flex justify-content-center">
+              <img class="swiperDocumentsContent__img" src="images/Document1.jpg" alt="Document1">
+            </a>
+            <a href="images/Document2.jpg" class="swiper-slide d-flex justify-content-center">
+              <img class="swiperDocumentsContent__img" src="images/Document2.jpg" alt="Document2">
+            </a>
+            <a href="images/Document3.jpg" class="swiper-slide d-flex justify-content-center">
+              <img class="swiperDocumentsContent__img" src="images/Document3.jpg" alt="Document3">
+            </a>
+            <a href="images/Document1.jpg" class="swiper-slide d-flex justify-content-center">
+              <img class="swiperDocumentsContent__img" src="images/Document1.jpg" alt="Document1">
+            </a>
+            <a href="images/Document2.jpg" class="swiper-slide d-flex justify-content-center">
+              <img class="swiperDocumentsContent__img" src="images/Document2.jpg" alt="Document2">
+            </a>
+            <a href="images/Document3.jpg" class="swiper-slide d-flex justify-content-center">
+              <img class="swiperDocumentsContent__img" src="images/Document3.jpg" alt="Document3">
+            </a>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+    <section class="NewGeneration">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="NewGeneration__leftPath col-12 col-md-8 element-animation">
+            <h2 class="NewGeneration__leftPath__tittle ">Новое поколение ПЦР-диагностики
+              от дома до потоковых решений</h2>
+            <img class="NewGeneration__leftPath__img" src="images/Claster1.png" alt="Claster1 ">
+          </div>
+          <div class="NewGeneration__rightPath col-12 col-md-4 align-self-end element-animation">
+            <p class="NewGeneration__rightPath__text mt-5 mt-md-0">LifePad - компактная мобильная система с высокой
+              производительностью.</p>
+            <a class="button NewGeneration__rightPath__button mt-4" href="#">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="billboard">
+      <div class="container">
+        <p class="billboard__text m-0 element-animation">Окологические пациенты относятся к группе риска
+          тяжелого течения
+          коронавирусной инфекции COVID-19, поскольку
+          более восприимчивы к вирусным инфекциям из-за иммуносупрессии на фоне противоопухолевого лечения. При
+          появлении малейших симптомов ОРВИ необходимо в кратчайшие сроки определить, не вызваны ли эти симптомы вирусом
+          COVID-19 – в этом поможет LifePad®.</p>
+      </div>
+    </section>
+    <section class="marketplace">
+      <div class="container">
+        <h2 class="marketplace__tittle element-animation">Где купить?</h2>
+        <div class="marketplace__content">
+          <a href="#" class="marketplace__content__item d-flex justify-content-center element-animation">
+            <img class="marketplace__content__item__img" src="images/ozon.svg" alt="ozon">
+          </a>
+          <a href="#" class="marketplace__content__item d-flex justify-content-center element-animation">
+            <img class="marketplace__content__item__img" src="images/ymarket.svg" alt="ymarket">
+          </a>
+          <a href="#" class="marketplace__content__item d-flex justify-content-center element-animation">
+            <img class="marketplace__content__item__img" src="images/wb.svg" alt="wb">
+          </a>
+          <a href="#" class="marketplace__content__item d-flex justify-content-center element-animation">
+            <img class="marketplace__content__item__img" src="images/sber.svg" alt="sber">
+          </a>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="topPart">
+        <div class="topPart__item d-flex flex-column">
+          <a href="products.html" class="topPart__item__tittle">Продукция</a>
+          <a href="#" class="topPart__item__text pt-3">Анализатор</a>
+          <a href="#" class="topPart__item__text">Расходные материалы</a>
+        </div>
+        <div class="topPart__item d-flex flex-column">
+          <a href="adviсe.html" class="topPart__item__tittle">советы</a>
+          <a href="adviсe.html#TipsForYou" class="topPart__item__text pt-3">Советы для вас</a>
+          <a href="adviсe.html#LifeStories" class="topPart__item__text">Истории из жизни</a>
+          <a href="adviсe.html#TipsByTopic" class="topPart__item__text">Советы по темам</a>
+      </div>
+        <div class="topPart__item d-flex flex-column">
+          <a href="support.html" class="topPart__item__tittle">поддержка</a>
+          <a href="support.html#ProductSupport" class="topPart__item__text pt-3">Поддержка по продукции</a>
+          <a href="support.html#contacts" class="topPart__item__text">Наши контакты</a>
+          <a href="support.html#FAQ" class="topPart__item__text">Часто задаваемые вопросы</a>
+        </div>
+        <div class="topPart__item d-flex flex-column">
+          <a href="#" class="topPart__item__tittle">подписка на Новости</a>
+          <a href="diary.html" class="topPart__item__tittle pt-2">дневник</a>
+          <a href="downloads.html" class="topPart__item__tittle pt-2">загрузки</a>
+        </div>
+        <div class="topPart__item d-flex flex-column">
+          <img href="#" class="topPart__item__img" src="images/googlePlay.svg" alt="googlePlay">
+          <img href="#" class="topPart__item__img mt-2" src="images/appstore.svg" alt="appstore">
+        </div>
+      </div>
+
+      <div class="centralPart pt-4">
+        <hr class="line">
+        <p class="centralPart__text pt-4">Используя этот сайт, вы соглашаетесь с нашими <a href="#"
+            class="centralPart__text__link">Пользовательским соглашением</a>,
+          <a href="#" class="centralPart__text__link">Политикой обработки персональных данных</a>
+          и <a href="#" class="centralPart__text__link">Политикой использования файлов Cookie</a>.
+        </p>
+        <p class="centralPart__text">Информация, размещенная на сайте носит характер рекомендаций и не может считаться
+          консультацией медицинского
+          работника или заменить ее. Всегда консультируйтесь со своим лечащим врачом перед тем как следовать той или
+          иной рекомендации. Если у Вас появились вопросы, Вы всегда сможете их задать по телефону горячей линии: <a class="centralPart__text__telephone" href="tel:88007076401">8 (800) 707-64-01</a></p>
+        <div class="centralPart__subtittles pt-4">
+          <a class="centralPart__subtittles__subtittle pe-0 pe-md-4" href="#">ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a>
+          <a class="centralPart__subtittles__subtittle pt-4 pt-md-0" href="#">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+        </div>
+        <hr class="line">
+      </div>
+      <div class="bottomPart">
+        <h3 class="bottomPart__text m-0 p-0">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ<br><span
+            class="bottomPart__text__bottom">ПРОКОНСУЛЬТИРУЙТЕСЬ СО СПЕЦИАЛИСТОМ</span></h3>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="js/magnific-popup.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
